@@ -12,7 +12,8 @@ public class SceneLoadingTester : MonoBehaviour
     //update function to check for input and load scenes
     void Update()
     {
-        if (StaticData.developerMode)
+        //check if developermode is active
+        if (GameManager.instance.developerMode)
         {
             //check for input to load scenes
             if (Input.GetKeyDown(KeyCode.Alpha1))

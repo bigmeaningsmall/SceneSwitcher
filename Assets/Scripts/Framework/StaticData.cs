@@ -12,8 +12,12 @@ using UnityEngine;
 
 public static class StaticData
 {
-    [Space(10)] 
-    [Header("Set Developer Mode")] 
-    public static bool developerMode = true; //set true to enable developer settings
+    
+    [Header("Set Game Version")]
+    public static string gameVersion = "0.0.1"; //set the game version
+
+    [Header("Set Game Title")]
+    public static string gameTitle = "Game Title"; //set the game title
+    
     
 }

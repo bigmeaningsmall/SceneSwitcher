@@ -30,6 +30,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] float playerMaxHealth = 10;
     [SerializeField] public float playerCurrentHealth = 10;
 
+    [Header("Debugging")]
+    public bool developerMode = true; //set true to enable developer settings
+    
     #region Initialise
     void Awake()
     {
