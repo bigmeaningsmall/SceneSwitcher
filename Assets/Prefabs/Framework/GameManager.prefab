@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7066764146619276823}
-  - component: {fileID: 1705365270916756770}
+  - component: {fileID: 4774977084904338106}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1705365270916756770
+--- !u!114 &4774977084904338106
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -46,5 +46,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   CurrentGameState: 4
   OverworldRunning: 0
-  playerMaxHealth: 10
-  playerCurrentHealth: 10
+  playerAttributes:
+    playerName: pl
+    maxHealth: 0
+    health: 0
+    damage: 0
+    speed: 0
+    attackRange: 0
+    attackCooldown: 0
+    attackDuration: 0
+    attackDelay: 0
+  developerMode: 1

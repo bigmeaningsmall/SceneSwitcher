@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 
 #region Game State
@@ -18,20 +19,28 @@ public enum GameState
 
 public class GameManager : MonoBehaviour
 {
+    //create an instance of GameManager
+    public static GameManager instance;
+
+    #region Game State and Status
     [Header("Current Game State and Status")]
     public GameState CurrentGameState = GameState.Gameplay; // current game state
     public bool OverworldRunning = false; 
-    
-    public static GameManager instance;
-    
-    [Space(10)] 
-    [Header("Player Health and Attributes")] 
-    //Player attributes
-    [SerializeField] float playerMaxHealth = 10;
-    [SerializeField] public float playerCurrentHealth = 10;
+    #endregion
 
+    #region Player Health and Attributes
+    [Space(10)] [Header("Player Health and Attributes")]
+    //Player attributes - scriptible object
+    [SerializeField]
+    private PlayerAttributes playerAttributes; 
+    #endregion
+
+
+    #region Debug Settings
     [Header("Debugging")]
     public bool developerMode = true; //set true to enable developer settings
+    #endregion
+
     
     #region Initialise
     void Awake()
@@ -96,25 +105,11 @@ public class GameManager : MonoBehaviour
 
     #endregion
 
-    //get and set the players health - call from other scripts to add health, take damage and check health
-    //health can be greater than max health
-    public float PlayerCurrentHealth
+    //get and set the players attributes from the playerAttributes class
+    public PlayerAttributes PlayerAttributes
     {
-        get
-        {
-            return playerCurrentHealth;
-        }
-        set 
-        { 
-            if (value > playerMaxHealth)
-            {
-                playerCurrentHealth = playerMaxHealth;
-            }
-            else
-            {
-                playerCurrentHealth = value; 
-            }
-        }
+        get { return playerAttributes; }
+        set { playerAttributes = value; }
     }
     
 }

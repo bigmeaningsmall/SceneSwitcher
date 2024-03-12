@@ -1063,6 +1063,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameManager
       objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.speed
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.damage
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.health
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.maxHealth
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.playerName
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.attackDelay
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.attackRange
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.attackCooldown
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.attackDuration
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7066764146619276823, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
