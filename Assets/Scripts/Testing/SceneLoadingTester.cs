@@ -19,22 +19,22 @@ public class SceneLoadingTester : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.Alpha1))
             {
                 //load the main menu scene
-                SceneLoader.instance.LoadMainMenu();
+                SceneLoader.instance.LoadScene(Enums.Scenes.MainMenu);
             }
             if (Input.GetKeyDown(KeyCode.Alpha2))
             {
                 //load the options scene
-                SceneLoader.instance.LoadOptionsScene();
+                SceneLoader.instance.LoadScene(Enums.Scenes.Options);
             }
             if (Input.GetKeyDown(KeyCode.Alpha3))
             {
                 //load the gameplay scene
-                SceneLoader.instance.LoadGameplayScene();
+                SceneLoader.instance.LoadScene(Enums.Scenes.Gameplay);
             }
             if (Input.GetKeyDown(KeyCode.Alpha4))
             {
                 //load the game over scene
-                SceneLoader.instance.LoadGameOverScene();
+                SceneLoader.instance.LoadScene(Enums.Scenes.GameOver);
             }
         }
 

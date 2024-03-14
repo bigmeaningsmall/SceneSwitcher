@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+using Enums;
+
 public class SceneLoader : MonoBehaviour
 {
     public static SceneLoader instance;
@@ -18,23 +20,26 @@ public class SceneLoader : MonoBehaviour
         }
     }
 
-    public void LoadMainMenu()
+    
+    public void LoadScene(Scenes scene)
     {
-        SceneManager.LoadScene("Scene-MainMenu");
+        SceneManager.LoadScene("Scene-"+ scene.ToString());
+        
+        // switch (scene)
+        // {
+        //     case Scenes.MainMenu:
+        //         SceneManager.LoadScene("Scene-"+ scene.ToString());
+        //         break;
+        //     case Scenes.Options:
+        //         SceneManager.LoadScene("Scene-"+ scene.ToString());
+        //         break;
+        //     case Scenes.Gameplay:
+        //         SceneManager.LoadScene("Scene-"+ scene.ToString());
+        //         break;
+        //     case Scenes.GameOver:
+        //         SceneManager.LoadScene("Scene-"+ scene.ToString());
+        //         break;
+        // }
     }
 
-    public void LoadOptionsScene()
-    {
-        SceneManager.LoadScene("Scene-Options");
-    }
-
-    public void LoadGameplayScene()
-    {
-        SceneManager.LoadScene("Scene-Gameplay");
-    }
-
-    public void LoadGameOverScene()
-    {
-        SceneManager.LoadScene("Scene-GameOver");
-    }
 }

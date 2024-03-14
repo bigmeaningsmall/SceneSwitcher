@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Rendering;
 using UnityEngine.Serialization;
 
 
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
     public bool developerMode = true; //set true to enable developer settings
     #endregion
 
+
     
     #region Initialise
     void Awake()
@@ -54,6 +56,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+    }
+    void Start()
+    {
+        //initialise
     }
     #endregion
 
@@ -99,17 +105,13 @@ public class GameManager : MonoBehaviour
     }
     #endregion
 
-    #region Static Variables
-    
-    //public 
-
-    #endregion
-
+    #region Getters and Setters
     //get and set the players attributes from the playerAttributes class
     public PlayerAttributes PlayerAttributes
     {
         get { return playerAttributes; }
         set { playerAttributes = value; }
     }
+    #endregion
     
 }
