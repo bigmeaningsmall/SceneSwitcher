@@ -17,7 +17,7 @@ public class InitialiseScene : MonoBehaviour{
     private Transform playerSpawnPoint; // The position to instantiate the player at
     #endregion
 
-    #region Initialise Level
+    #region Initialise Level and Player
     private void Awake(){
         //get the spawn point for the player from the hierarchy - child object called (Player Spwan Point)
         if (GameObject.Find("Player Spawn Point").transform)
@@ -49,6 +49,7 @@ public class InitialiseScene : MonoBehaviour{
         }
     }
 
+    //here we check if the player exists in the scene and if not then we instantiate the player
     private void InitialisePlayer(){
         //check if the player exists in the scene - if not then instantiate the player
         if (GameObject.FindWithTag("Player") == null){
@@ -59,8 +60,14 @@ public class InitialiseScene : MonoBehaviour{
         else{
             //get the player from the scene
             player = GameObject.FindWithTag("Player");
-            Debug.Log("Player already exists in scene!");
+            //set the player position to the spawn point
+            player.transform.position = playerSpawnPoint.position;
+            Debug.Log("Player already exists in scene! -  moved to spawn point");
         }
+        
+        //ASSIGN THE PLAYER TO THE GAME MANAGER - nice to have but may not need..
+        gameManager.player1 = player;
+        
     }
     #endregion
 }

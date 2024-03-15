@@ -43,7 +43,7 @@ public class UI_Health : MonoBehaviour
     
     private void Update(){
         //update the health text
-        healthText.text = currentHealth.ToString() + " / " + maxHealth.ToString();
+        healthText.text = "Health: " + currentHealth.ToString() + " / " + maxHealth.ToString();
         
         //TODO - update the health bar value as a percentage of the player's health
         //update the health bar value as a percentage of the player's health

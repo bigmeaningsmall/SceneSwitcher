@@ -1064,8 +1064,16 @@ PrefabInstance:
       value: GameManager
       objectReference: {fileID: 0}
     - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.health
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
+      propertyPath: playerAttributes.maxHealth
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
       propertyPath: playerAttributes.playerName
-      value: 
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 7066764146619276823, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
       propertyPath: m_LocalPosition.x

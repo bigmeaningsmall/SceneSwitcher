@@ -39,11 +39,11 @@ public class Player : MonoBehaviour
     }
     private void InitialisePlayer()
     {
-        //get the players attributes from the game manager - THIS WILL BE USED TO LOAD BETWEEN SCENES OR FROM SAVE FILES
+        //get the players attributes from the game manager - THIS WILL BE USED TO LOAD BETWEEN SCENES OR FROM SAVE FILES (GAME MANAGER LOADS SAVES - WE LOAD THE PLAYER ATTRIBUTES FROM GAME MANAGER) 
         playerAttributes = gameManager.PlayerAttributes;
         Debug.Log("Initialise Player: " + playerAttributes.playerName + " - Health: " + playerAttributes.health);
         
-        //BROADCAST the player attributes to the event
+        //BROADCAST the player attributes to the event - this will update the UI with the players health and can be used by any other scripts that require this information on initialisation
         if(OnPlayerModified != null)
         {
             OnPlayerModified(playerAttributes);
@@ -91,7 +91,7 @@ public class Player : MonoBehaviour
         //update the game manager with the new players attributes
         SetPlayerAttributes();
         
-        //BROADCAST the player attributes to the event
+        //BROADCAST the player attributes to the event - this will update the UI with the players health and can be used by any other scripts that require this information as it changes
         if(OnPlayerModified != null)
         {
             OnPlayerModified(playerAttributes);

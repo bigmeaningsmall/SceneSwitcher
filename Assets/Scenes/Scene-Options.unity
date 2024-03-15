@@ -1073,15 +1073,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
       propertyPath: playerAttributes.health
-      value: 0
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
       propertyPath: playerAttributes.maxHealth
-      value: 0
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
       propertyPath: playerAttributes.playerName
-      value: 
+      value: Player1
       objectReference: {fileID: 0}
     - target: {fileID: 4774977084904338106, guid: 2494ba9bbc647e24989ac481eac205e5, type: 3}
       propertyPath: playerAttributes.attackDelay

@@ -29,7 +29,10 @@ public class GameManager : MonoBehaviour
     public bool OverworldRunning = false; 
     #endregion
 
-    #region Player Health and Attributes
+    #region Player - Health and Attributes
+    [Space(10)] [Header("Player 1 GameObject")]
+    public GameObject player1; //player 1 game object
+    
     [Space(10)] [Header("Player Health and Attributes")]
     //Player attributes - scriptible object
     [SerializeField]
@@ -56,17 +59,22 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        
+        //IF WE HAD A SAVE SYSTEM THEN WE WOULD LOAD EVERYTHING HERE SO IT IS AVAILABLE IN OTHER SCRIPT START FUNCTIONS (EG: PLAYER ATTRIBUTES, GAME STATE ETC...)
+        //.............................................
     }
     void Start()
     {
-        //initialise
+        //initialise more things if needed
     }
     #endregion
 
     #region GameStates
+    // Methods for each game state - these are called when the game state is changed 
     private void Gameplay()
     {
         OverworldRunning = true;
+        Debug.Log("Gameplay Running!");
     }
     private void GameOver()
     {
@@ -93,13 +101,25 @@ public class GameManager : MonoBehaviour
     public void ChangeGameState(GameState newGameState)
     {
         CurrentGameState = newGameState;
-        if (CurrentGameState == GameState.MainMenu)
-        {
-            MainMenu();
-        }
-        if (CurrentGameState == GameState.Gameplay)
-        {
-            Gameplay();
+        switch (newGameState){
+            case GameState.Gameplay:
+                Gameplay();
+                break;
+            case GameState.GameOver:
+                GameOver();
+                break;
+            case GameState.Battling:
+                Battling();
+                break;
+            case GameState.MainMenu:
+                MainMenu();
+                break;
+            case GameState.Options:
+                Options();
+                break;
+            case GameState.Paused:
+                Paused();
+                break;
         }
         
     }
